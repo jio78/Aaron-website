@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Barlow", sans-serif;
+      }
+      header {
+        background-color: black;
+        padding: 30px 80px;
+      }
+      .nav-left {
+        display: inline-block;
+        color: white;
+        font-size: 22px;
+      }
+      .robot-list {
+        background-color: #b38b4b;
+      }
+      h2,
+      h3 {
+        margin: 0;
+      }
+      .nav-right {
+        display: inline-block;
+        float: right;
+        color: white;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .nav-right a {
+        display: inline-block;
+        margin-left: 15px;
+        text-decoration: none;
+        color: white;
+      }
+      .header1 {
+        padding: 0 80px;
+        height: 500px;
+        background: url("./banner-bg.png") no-repeat center;
+        background-size: cover;
+        position: relative;
+      }
+      .header1 .bg {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .header1 .text-content {
+        position: relative;
+        z-index: 2;
+      }
+      .header1 h3 {
+        padding-top: 100px;
+        font-size: 39px;
+        color: white;
+      }
+      .header1 a {
+        font-size: 16px;
+        background-color: rgba(179, 138, 76, 1);
+        padding: 10px 25px;
+        margin-top: 30px;
+        display: inline-block;
+        border-radius: 4px;
+        color: white;
+        font-weight: 600;
+      }
+      .robot {
+        display: block;
+        background-color: white;
+        color: black;
+        width: 310px;
+        height: 380px;
+      }
+      .robot1img {
+        height: 180px;
+        background: url("./banner-bg.png") no-repeat center;
+        background-size: cover;
+      }
+      .robot1img p {
+        position: absolute;
+        font-size: 18px;
+        color: white;
+        text-transform: uppercase;
+        left: 20px;
+        top: 20px;
+        margin: 0;
+      }
+      .robot1text {
+        padding: 30px 20px 15px 20px;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        padding: 30px 80px;
+      }
+      .footer-left {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+      }
+      .footer-middle {
+        display: inline-block;
+        width: 20%;
+        margin-left: 20%;
+        vertical-align: top;
+      }
+      .footer-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin-left: 10%;
+        border-left: 1px solid white;
+        padding-left: 40px;
+        padding-bottom: 20px;
+      }
+      footer h3 {
+        font-size: 24px;
+      }
+      .footer-right .email-link {
+        text-decoration: none;
+        display: inline-block;
+        padding-top: 6px;
+        color: rgba(179, 138, 76, 1);
+      }
+      footer .link-icon {
+        width: 34px;
+        margin-top: 10px;
+      }
+      .footer-left p {
+        line-height: 22px;
+      }
+      .robot1img {
+        position: relative;
+      }
+      .robot1img .bg {
+        height: 180px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 310px;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .robot1text h3 {
+        font-size: 24px;
+      }
+      .robot1text p {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+      }
+      .robot1text img {
+        width: 30px;
+      }
+      .robot1text button {
+        background: none;
+        border: none;
+        color: #b38b4b;
+        font-size: 15px;
+        padding: 0;
+        cursor: pointer;
+      }
+      .find-out-more {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .find-out-more:hover button {
+        font-weight: 600;
+      }
+      .find-out-more a{
+        text-decoration: none;
+        color: #b38b4b;
+      }
+      .robot-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .robot-items {
+        width: 1050px;
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 60px;
+        flex-wrap: wrap;
+      }
+      .robot-items .robot {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+      }
+      .list-header {
+        padding-top: 100px;
+        width: 1050px;
+        padding-left: 30px;
+      }
+      .list-header h2 {
+        font-size: 52px;
+        color: white;
+      }
+      .list-header p {
+        font-size: 25px;
+        color: white;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <a><h2>A.I.M. Bot Robotics</h2></a>
+      </div>
+      <div class="nav-right">
+        <a href="./index.html"><h3>Home</h3></a>
+        <a href="./robot-list.html"><h3>Robots</h3></a>
+        <a href="./members.html"><h3>About Us</h3></a>
+      </div>
+    </header>
+    <section class="robot-list">
+      <div class="list-header">
+        <h2>Robot<br />List</h2>
+        <p>Covering March & April 2015</p>
+      </div>
+      <div class="robot-items">
+        <div class="robot">
+          <div class="robot1img">
+            <div class="bg"></div>
+            <p>filler</p>
+          </div>
+          <div class="robot1text">
+            <h3>Robot 1</h3>
+            <p>This is our first robot</p>
+            <div class="find-out-more">
+              <img src="./arrow_right_icon.png" />
+              <button><a href="./robot-1-detail.html">Find Out More</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="robot">
+          <div class="robot1img">
+            <div class="bg"></div>
+            <p>filler</p>
+          </div>
+          <div class="robot1text">
+            <h3>Robot 2</h3>
+            <p>This is our first robot</p>
+            <div class="find-out-more">
+              <img src="./arrow_right_icon.png" />
+              <button>Find Out More</button>
+            </div>
+          </div>
+        </div>
+        <div class="robot">
+          <div class="robot1img">
+            <div class="bg"></div>
+            <p>filler</p>
+          </div>
+          <div class="robot1text">
+            <h3>Robot 3</h3>
+            <p>This is our first robot</p>
+            <div class="find-out-more">
+              <img src="./arrow_right_icon.png" />
+              <button>Find Out More</button>
+            </div>
+          </div>
+        </div>
+        <div class="robot">
+          <div class="robot1img">
+            <div class="bg"></div>
+            <p>filler</p>
+          </div>
+          <div class="robot1text">
+            <h3>Robot 4</h3>
+            <p>This is our first robot</p>
+            <div class="find-out-more">
+              <img src="./arrow_right_icon.png" />
+              <button>Find Out More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div class="footer-left">
+          <h3>About Us</h3>
+          <p>We are a robotics team participating in First Tech Challenge</p>
+        </div>
+        <div class="footer-middle">
+          <h3>Location</h3>
+          <h4>Wilson's place</h4>
+        </div>
+        <div class="footer-right">
+          <h3>Contact Info</h3>
+          <h4>
+            Email:
+            <a href="mailto:aimbotrobotics16448@gmail.com" class="email-link"
+              >aimbotrobotics16448@gmail.com</a
+            >
+          </h4>
+          <div>
+            <h3>Let's connect</h3>
+            <img src="./location_icon.png" class="link-icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

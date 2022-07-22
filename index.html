@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Barlow", sans-serif;
+      }
+      header {
+        background-color: black;
+        padding: 30px 80px;
+      }
+      .nav-left {
+        display: inline-block;
+        color: white;
+        font-size: 22px;
+      }
+      h2,
+      h3 {
+        margin: 0;
+      }
+      .nav-right {
+        display: inline-block;
+        float: right;
+        color: white;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .nav-right a {
+        display: inline-block;
+        margin-left: 15px;
+        text-decoration: none;
+        color: white;
+      }
+      .header1 {
+        padding: 0 80px;
+        height: 500px;
+        background: url("./banner-bg.png") no-repeat center;
+        background-size: cover;
+        position: relative;
+      }
+      .header1 .bg {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .header1 .text-content {
+        position: relative;
+        z-index: 2;
+      }
+      .header1 h3 {
+        padding-top: 100px;
+        font-size: 39px;
+        color: white;
+      }
+      .header1 a {
+        font-size: 16px;
+        background-color: rgba(179, 138, 76, 1);
+        padding: 10px 25px;
+        margin-top: 30px;
+        display: inline-block;
+        border-radius: 4px;
+        color: white;
+        font-weight: 600;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        padding: 30px 80px;
+      }
+      .footer-left {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+      }
+      .footer-middle {
+        display: inline-block;
+        width: 20%;
+        margin-left: 20%;
+        vertical-align: top;
+      }
+      .footer-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin-left: 10%;
+        border-left: 1px solid white;
+        padding-left: 40px;
+        padding-bottom: 20px;
+      }
+      footer h3 {
+        font-size: 24px;
+      }
+      .footer-right .email-link {
+        text-decoration: none;
+        display: inline-block;
+        padding-top: 6px;
+        color: rgba(179, 138, 76, 1);
+      }
+      footer .link-icon {
+        width: 34px;
+        margin-top: 10px;
+      }
+      .footer-left p {
+        line-height: 22px;
+      }
+      .about-us {
+        display: flex;
+        padding: 70px 80px 40px 80px;
+        align-items: center;
+        width: 1000px;
+      }
+      
+      .about-us-left {
+        margin-right: 100px;
+      }
+      .about-us-left h2 {
+        font-size: 45px;
+      }
+      .about-us-right {
+        flex: 1;
+      }
+      .about-us-right h3 {
+        font-size: 30px;
+      }
+      .about-us-right p {
+        color: rgba(40, 26, 23, 0.6);
+        font-size: 20px;
+        line-height: 30px;
+      }
+      @media (max-width: 1000px) {
+        .about-us {
+          flex-direction: column;
+        }
+        .about-us-left{
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+      .our-competitions {
+        display: flex;
+        padding: 30px 80px 110px 80px;
+      }
+      .our-competitions-left {
+        background-color: #f1f1f1;
+        flex: 1;
+      }
+      .our-competitions-middle {
+        background-color: #f1f1f1;
+        flex: 1;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .our-competitions-right {
+        background-color: #f1f1f1;
+        flex: 1;
+      }
+      .competition-item h3 {
+        height: 120px;
+        background: rgb(179, 138, 76);
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        line-height: 120px;
+      }
+      .competition-item p {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 40px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .competition-item .design-left {
+        position: relative;
+      }
+      .border-element {
+        position: absolute;
+        height: 30px;
+        width: 1px;
+        background-color: #4d4d4d;
+        right: 0;
+        top: 8px;
+      }
+      .competition-item .design {
+        margin-top: 40px;
+      }
+      .competition-item .design h4 {
+        margin-top: 0px;
+        font-size: 10px;
+        color: #4d4d4d;
+        margin-bottom: 0px;
+      }
+      .competition-item .design span {
+        font-size: 30px;
+        color: #4d4d4d;
+      }
+      .design {
+        display: flex;
+      }
+      .design-left {
+        text-align: center;
+        flex: 1;
+      }
+      .design-right {
+        text-align: center;
+        flex: 1;
+      }
+      .about-us-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .sponsorship-section {
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 100px;
+      }
+      .sponsorship-section-title h2 {
+        font-size: 29px;
+        color: rgba(179, 138, 76, 1);
+      }
+      .sponsorship-section-des p {
+        font-size: 14px;
+        line-height: 25px;
+      }
+      .sponsorship-logo-section {
+        padding-top: 20px;
+      }
+      .sponsorship-logo-section img {
+        height: 70px;
+      }
+      .elementor-widget-divider {
+        position: relative;
+        margin-top: 50px;
+      }
+      .elementor-dividertext {
+        position: absolute;
+        left: 45%;
+        background-color: white;
+        color: #4d4d4d;
+        padding-left: 10px;
+        padding-right: 10px;
+        top: -10px;
+      }
+      .elementor-divider-line {
+        width: 100%;
+        border-top: 1px dashed #4d4d4d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <a><h2>A.I.M. Bot Robotics</h2></a>
+      </div>
+      <div class="nav-right">
+        <a href="./index.html"><h3>Home</h3></a>
+        <a href="./robot-list.html"><h3>Robots</h3></a>
+        <a href="./members.html"><h3>About Us</h3></a>
+      </div>
+    </header>
+    <section class="header1">
+      <div class="bg"></div>
+      <div class="text-content">
+        <h3>
+          A GLOBAL ROBOTICS COMMUNITY PREPARING YOUNG PEOPLE FOR THE FUTURE
+        </h3>
+        <a>Discover Our Robots</a>
+      </div>
+    </section>
+    <div class="about-us-wrapper">
+      <section class="about-us">
+        <div class="about-us-left">
+          <h2>A.I.M. Bot Robotics</h2>
+        </div>
+        <div class="about-us-right">
+          <h3>About this Club</h3>
+          <p>
+            Our Sierra Robotics team works collaboratively amongst a variety of
+            technical and engineering students to build, program, and use robots
+            in competitive settings. It is encouraged for students to take on
+            specific, designated roles to help make projects run smoothly.
+          </p>
+        </div>
+      </section>
+    </div>
+    <section class="our-competitions">
+      <div class="our-competitions-left competition-item">
+        <h3>Skystone</h3>
+        <div class="design">
+          <div class="design-left">
+            <div class="border-element"></div>
+            <h4>2019-2020</h4>
+            <span>text</span>
+          </div>
+          <div class="design-right">
+            <h4>2019-2020</h4>
+            <span>text</span>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+          Integer tincidunt..
+        </p>
+      </div>
+      <div class="our-competitions-middle competition-item">
+        <h3>Ultimate Goal</h3>
+        <div class="design">
+          <div class="design-left">
+            <div class="border-element"></div>
+            <h4>2019-2020</h4>
+            <span>text</span>
+          </div>
+          <div class="design-right">
+            <h4>2020-2021</h4>
+            <span>text</span>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+          Integer tincidunt.
+        </p>
+      </div>
+      <div class="our-competitions-right competition-item">
+        <h3>Freight Frenzy</h3>
+        <div class="design">
+          <div class="design-left">
+            <div class="border-element"></div>
+            <h4>2019-2020</h4>
+            <span>text</span>
+          </div>
+          <div class="design-right">
+            <h4>2019-2020</h4>
+            <span>text</span>
+          </div>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
+          nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+          venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+          Integer tincidunt.
+        </p>
+      </div>
+    </section>
+    <section class="sponsorship-section">
+      <div class="sponsorship-section-title">
+        <h2>Sponsors</h2>
+      </div>
+      <div class="sponsorship-section-des">
+        <p>
+          <em>FIRST</em> Robotics Canada exists thanks to the dedication,
+          commitment and financial support of our sponsors. Through their
+          generous donations, <em>FIRST</em> Robotics Canada is able to immerse
+          our youth in an environment where science and technology are as
+          celebrated as sports.
+        </p>
+      </div>
+      <div class="elementor-widget-divider">
+        <div class="elementor-divider-line"></div>
+        <span class="elementor-dividertext">company</span>
+      </div>
+      <div class="sponsorship-logo-section">
+        <div>
+          <div class="elementor-image">
+            <img
+              src="https://www.firstroboticscanada.org/wp-content/uploads/2022/01/TD-SYNNEX_Logo_Color_RGB-1024x197.png"
+              class="attachment"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="footer-left">
+          <h3>About Us</h3>
+          <p>We are a robotics team participating in First Tech Challenge</p>
+        </div>
+        <div class="footer-middle">
+          <h3>Location</h3>
+          <h4>Wilson's place</h4>
+        </div>
+        <div class="footer-right">
+          <h3>Contact Info</h3>
+          <h4>
+            Email:
+            <a href="mailto:aimbotrobotics16448@gmail.com" class="email-link"
+              >aimbotrobotics16448@gmail.com</a
+            >
+          </h4>
+          <div>
+            <h3>Let's connect</h3>
+            <img src="./location_icon.png" class="link-icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

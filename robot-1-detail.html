@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Barlow", sans-serif;
+      }
+      header {
+        background-color: black;
+        padding: 30px 80px;
+      }
+      .nav-left {
+        display: inline-block;
+        color: white;
+        font-size: 22px;
+      }
+      .robot-list {
+        background-color: #b38b4b;
+      }
+      h2,
+      h3 {
+        margin: 0;
+      }
+      .nav-right {
+        display: flex;
+        float: right;
+        color: white;
+        font-size: 14px;
+        margin-top: 8px;
+        align-items: center;
+      }
+      .nav-right a {
+        display: inline-block;
+        margin-left: 15px;
+        text-decoration: none;
+        color: white;
+      }
+      .nav-right a button {
+        font-size: 14px;
+        background-color: white;
+        border: none;
+        padding: 6px 10px 6px 10px;
+        border-radius: 8px;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        padding: 30px 80px;
+      }
+      .footer-left {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+      }
+      .footer-middle {
+        display: inline-block;
+        width: 20%;
+        margin-left: 20%;
+        vertical-align: top;
+      }
+      .footer-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin-left: 10%;
+        border-left: 1px solid white;
+        padding-left: 40px;
+        padding-bottom: 20px;
+      }
+      footer h3 {
+        font-size: 24px;
+      }
+      .footer-right .email-link {
+        text-decoration: none;
+        display: inline-block;
+        padding-top: 6px;
+        color: rgba(179, 138, 76, 1);
+      }
+      footer .link-icon {
+        width: 34px;
+        margin-top: 10px;
+      }
+      .footer-left p {
+        line-height: 22px;
+      }
+      .robot-detail-header {
+        background: url("./robot-bg.jpg") no-repeat;
+        background-size: cover;
+        background-position: center 70%;
+        height: 350px;
+      }
+      .robot-detail-header h1 {
+        position: relative;
+        margin: 0;
+        padding-top: 60px;
+        text-align: center;
+        color: white;
+        font-size: 72px;
+      }
+      .robot-detail-header p {
+        position: relative;
+        margin: 20px 0 0 0;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+      .robot-detail-header {
+        position: relative;
+      }
+      .robot-detail-header .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .robot-detail-body {
+        display: flex;
+        justify-content: center;
+      }
+      .robot-detail-content {
+        max-width: 800px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .robot-detail-content img {
+        width: 90%;
+        margin-left: 5%;
+      }
+      .robot-detail-body p {
+        color: rgb(63, 63, 63);
+        font-size: 16px;
+        line-height: 24px;
+        margin: 30px 0 30px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <a><h2>A.I.M. Bot Robotics</h2></a>
+      </div>
+      <div class="nav-right">
+        <a href="./index.html"><h3>Home</h3></a>
+        <a href="./robot-list.html"><h3>Robots</h3></a>
+        <a href="./members.html"><h3>About Us</h3></a>
+      </div>
+    </header>
+    <section class="robot-detail-header">
+      <div class="bg"></div>
+      <h1>Merlin 2015-2016</h1>
+      <p>Our FIRST ever robot</p>
+    </section>
+    <section class="robot-detail-body">
+      <div class="robot-detail-content">
+        <p>
+          Merlin was the FIRST robot we ever built. We built Merlin for the
+          2015-16 FIRST Res-Q season. At the beginning of the season, we wanted
+          Merlin to drop the 2 climbers in the bucket and climb into the low
+          zone during autonomous. During the teleop mode, we wanted to have our
+          robot climb into the mid zone and be able to drop both blocks and
+          balls into the low bin. To climb the mountain, we wanted to use tank
+          treads because we thought that they would give us the most traction
+          climbing up the ramp. Below is a prototype of our tank tread drive.
+        </p>
+        <img src="./robot-bg.jpg" />
+        <p>
+          To pick up blocks and balls we wanted to use an arm with a scoop. We
+          wanted the arm to have a 4 arm linkage so that the end of the arm
+          would always stay parallel to the ground. This way the drivers
+          wouldn't have to worry about the angle of the end of the arm changing.
+          Below is the picture of the arm attached to the tank tread drive.
+        </p>
+        <img src="./robot-bg.jpg" />
+        <p>
+          To pick up blocks and balls we wanted to use an arm with a scoop. We
+          wanted the arm to have a 4 arm linkage so that the end of the arm
+          would always stay parallel to the ground. This way the drivers
+          wouldn't have to worry about the angle of the end of the arm changing.
+          Below is the picture of the arm attached to the tank tread drive.
+        </p>
+        <p>
+          To pick up blocks and balls we wanted to use an arm with a scoop. We
+          wanted the arm to have a 4 arm linkage so that the end of the arm
+          would always stay parallel to the ground. This way the drivers
+          wouldn't have to worry about the angle of the end of the arm changing.
+          Below is the picture of the arm attached to the tank tread drive.
+        </p>
+      </div>
+      <img />
+    </section>
+    <footer>
+      <div>
+        <div class="footer-left">
+          <h3>About Us</h3>
+          <p>We are a robotics team participating in First Tech Challenge</p>
+        </div>
+        <div class="footer-middle">
+          <h3>Location</h3>
+          <h4>Wilson's place</h4>
+        </div>
+        <div class="footer-right">
+          <h3>Contact Info</h3>
+          <h4>
+            Email:
+            <a href="mailto:aimbotrobotics16448@gmail.com" class="email-link"
+              >aimbotrobotics16448@gmail.com</a
+            >
+          </h4>
+          <div>
+            <h3>Let's connect</h3>
+            <img src="./location_icon.png" class="link-icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
