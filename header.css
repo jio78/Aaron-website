@@ -1,1 +1,23 @@
-
+header {
+  background-color: black;
+  padding: 30px 80px;
+}
+.nav-left {
+  display: inline-block;
+  color: white;
+  font-size: 22px;
+}
+.nav-right {
+  display: inline-block;
+  float: right;
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.nav-right a {
+  display: inline-block;
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+}
+      
