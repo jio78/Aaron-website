@@ -5,5 +5,6 @@ const headerHtml = `<div class="nav-left">
 <a href="./index.html"><h3>Home</h3></a>
 <a href="./robot-list.html"><h3>Robots</h3></a>
 <a href="./members.html"><h3>About Us</h3></a>
+<a href="./past-events.html"><h3>Events</h3></a>
 </div>`
 $('header').html(headerHtml)
