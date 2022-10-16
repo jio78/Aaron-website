@@ -1,1 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        font-family: "Barlow", sans-serif;
+      }
+      header {
+        background-color: black;
+        padding: 30px 80px;
+      }
+      .nav-left {
+        display: inline-block;
+        color: white;
+        font-size: 22px;
+      }
+      .past-events {
+        display: flex;
+        justify-content: center;
+        padding: 30px 80px;
+      }
+      .center-context {
+        display: flex;
+        justify-content: center;
+      }
+      .members h1 {
+        color: white;
+      }
+      h2,
+      h3 {
+        margin: 0;
+      }
+      .nav-right {
+        display: inline-block;
+        float: right;
+        color: white;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+      .nav-right a {
+        display: inline-block;
+        margin-left: 15px;
+        text-decoration: none;
+        color: white;
+      }
+      .header1 {
+        padding: 0 80px;
+        height: 500px;
+        background: url("./banner-bg.png") no-repeat center;
+        background-size: cover;
+        position: relative;
+      }
+      .header1 .bg {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      .header1 .text-content {
+        position: relative;
+        z-index: 2;
+      }
+      .about-us {
+        padding: 50px 0 100px;
+      }
+      .header1 h3 {
+        padding-top: 100px;
+        font-size: 39px;
+        color: white;
+      }
+      .header1 a {
+        font-size: 16px;
+        background-color: rgba(179, 138, 76, 1);
+        padding: 10px 25px;
+        margin-top: 30px;
+        display: inline-block;
+        border-radius: 4px;
+        color: white;
+        font-weight: 600;
+      }
+      .member {
+        display: flex;
+        align-items: center;
+        color: white;
+        width: 900px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .member-img {
+        height: 160px;
+        width: 160px;
+        background: url("./banner-bg.png") no-repeat center;
+        background-size: cover;
+        border-radius: 80px;
+        border: 2px solid white;
+        justify-content: center;
+      }
+      .awu-img {
+        height: 160px;
+        width: 160px;
+        background: url("./IMG_20221009_145853472.png") no-repeat center;
+        background-size: cover;
+        border-radius: 80px;
+        border: 2px solid white;
+        justify-content: center;
+      }
+      .member-img p {
+        position: absolute;
+        font-size: 18px;
+        color: white;
+        left: 20px;
+        top: 20px;
+      }
+      .member-card .member-text {
+        width: 210px;
+        padding: 30px 15px 15px 15px;
+      }
+      footer {
+        background-color: black;
+        color: white;
+        padding: 30px 80px;
+      }
+      .footer-left {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+      }
+      .footer-middle {
+        display: inline-block;
+        width: 20%;
+        margin-left: 20%;
+        vertical-align: top;
+      }
+      .footer-right {
+        display: inline-block;
+        vertical-align: top;
+        width: 20%;
+        margin-left: 10%;
+        border-left: 1px solid white;
+        padding-left: 40px;
+        padding-bottom: 20px;
+      }
+      footer h3 {
+        font-size: 24px;
+      }
+      .footer-right .email-link {
+        text-decoration: none;
+        display: inline-block;
+        padding-top: 6px;
+        color: rgba(179, 138, 76, 1);
+      }
+      footer .link-icon {
+        width: 34px;
+        margin-top: 10px;
+      }
+      .footer-left p {
+        line-height: 22px;
+      }
+      .member-card {
+        display: flex;
+        width: 420px;
+        margin-bottom: 20px;
+      }
+      .member-text p {
+        color: #b38b4b;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <a><h2>A.I.M. Bot Robotics</h2></a>
+      </div>
+      <div class="nav-right">
+        <a href="./index.html"><h3>Home</h3></a>
+        <a href="./robot-list.html"><h3>Robots</h3></a>
+        <a href="./members.html"><h3>About Us</h3></a>
+        <a href="./past-events.html"><h3>Events</h3></a>
+      </div>
+    </header>
 
+    <section class="past-events">
+      <div class="members">
+        <h1>Current Events</h1>
+      </div>
+      <div class="center-context">
+        <div class="member">
+          <div class="member-card">
+            <div class="member-img"></div>
+            <div class="member-text">
+              <h3>Aaron Li</h3>
+              <p>
+                Primary Driver, Designer</p>
+              <p>4th Year</p>
+              <p>Grade 12</p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="awu-img"></div>
+            <div class="member-text">
+              <h3>Aaron Wu</h3>
+              <p>
+                Robot and Website Programmer</p>
+              <p>4th Year</p>
+              <p>Grade 12</p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+            <div class="member-text">
+              <h3>Jason Liao</h3>
+              <p>
+                Designer</p>
+              <p>4th Year</p>
+                <p>Grade 12
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+            <div class="member-text">
+              <h3>Mike Qi</h3>
+              <p>
+              <p>Robot Programmer, Field Coach</p>
+              <p>4th Year</p>
+                <p>Grade 12
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Jerry Liu</h3>
+              <p>
+                Builder, Secondary Driver</p>
+                <p>4th Year</p>
+                <p>Grade 9
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Tyson Zadrevec</h3>
+              <p>
+                Electrical Engineer</p>
+                <p>4th Year</p>
+                <p>Grade 12
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Wilson Hu</h3>
+              <p>
+                Recruit</p>
+                <p>2nd Year</p>
+                <p>Grade 7
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Johan Song</h3>
+              <p>
+                Recruit</p>
+                <p>1st Year</p>
+                <p>Grade 10
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Joshua Yan</h3>
+              <p>
+                Recruit</p>
+                <p>1st Year</p>
+                <p>Grade 10
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Sophia Li</h3>
+              <p>
+                Recruit</p>
+                <p>1st Year</p>
+                <p>Grade 7
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Brandon</h3>
+              <p>
+                Recruit</p>
+                <p>1st Year</p>
+                <p>Grade 9
+              </p>
+            </div>
+          </div>
+          <div class="member-card">
+            <div class="member-img"></div>
+              <div class="member-text">
+              <h3>Kevin Liu</h3>
+              <p>
+                Former Member
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="footer-left">
+          <h3>About Us</h3>
+          <p>We are a robotics team participating in First Tech Challenge</p>
+        </div>
+        <div class="footer-middle">
+          <h3>Location</h3>
+          <h4>Wilson's place</h4>
+        </div>
+        <div class="footer-right">
+          <h3>Contact Info</h3>
+          <h4>
+            Email:
+            <a href="mailto:aimbotrobotics16448@gmail.com" class="email-link"
+              >aimbotrobotics16448@gmail.com</a
+            >
+          </h4>
+          <div>
+            <h3>Let's connect</h3>
+            <img src="./location_icon.png" class="link-icon" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    <script src="./1.js"></script>
+    <script></script>
+  </body>
+</html>
